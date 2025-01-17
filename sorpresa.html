@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una pequeña nota pt.3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="large-container">
+        <h1>🥺</h1>
+        <p>Hola Ojitos bonitos, ¿cómo estás? 😊 ...</p>
+        <button id="stopBtn" onclick="toggleMusic()">Detener Música</button>
+        <audio id="music" loop>
+            <source src="tu_cancion.mp3" type="audio/mp3">
+            Tu navegador no soporta la reproducción de audio.
+        </audio>
+    </div>
+
+    <script>
+        let music = document.getElementById("music");
+        let stopBtn = document.getElementById("stopBtn");
+
+        // Reproduce la música automáticamente al cargar
+        window.onload = () => music.play();
+
+        // Función para detener la música
+        function toggleMusic() {
+            if (music.paused) {
+                music.play();
+                stopBtn.textContent = "Detener Música";
+            } else {
+                music.pause();
+                stopBtn.textContent = "Reproducir Música";
+            }
+        }
+    </script>
+</body>
+</html>
