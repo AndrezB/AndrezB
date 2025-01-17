@@ -35,8 +35,8 @@ body {
     background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
     border-radius: 8px;
     width: 80%; /* Establece un ancho fijo para el contenedor */
-    max-width: 700px; /* Limita el ancho máximo */
-    max-height: 80vh; /* Limita la altura al 80% de la pantalla */
+    max-width: 10000px; /* Limita el ancho máximo */
+    max-height: 100vh; /* Limita la altura al 80% de la pantalla */
     overflow-y: auto; /* Permite desplazamiento vertical si el contenido es demasiado largo */
     box-sizing: border-box;
     text-align: justify; /* Justifica el texto a la izquierda y derecha */
