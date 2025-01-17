@@ -1,4 +1,4 @@
-/* Asegurar que el contenedor no se desborde */
+/* Estilo general para el cuerpo */
 body {
     margin: 0;
     padding: 0;
@@ -12,30 +12,54 @@ body {
     overflow: hidden;
 }
 
-/* Contenedor que tiene el texto */
-.large-container {
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 8px;
-    max-width: 90%; /* Asegura que el contenedor no ocupe todo el ancho */
-    overflow: hidden;
-    word-wrap: break-word; /* Evita que las palabras se desborden */
-    max-height: 90vh; /* Limita la altura para no desbordarse en pantallas pequeñas */
-    box-sizing: border-box;
+/* Fondo de estrellas en movimiento */
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('stars.png') repeat;
+    animation: moveStars 100s linear infinite;
+    pointer-events: none;
 }
 
-/* Estilo para el texto largo */
+@keyframes moveStars {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100%); }
+}
+
+/* Contenedor principal de la página */
+.large-container {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    border-radius: 8px;
+    max-width: 90%; /* Limita el ancho a un 90% */
+    max-height: 90vh; /* Limita la altura a un 90% de la pantalla */
+    overflow: auto; /* Permite desplazarse si el contenido es demasiado largo */
+    word-wrap: break-word; /* Evita que las palabras se desborden */
+    box-sizing: border-box;
+    text-align: center; /* Alinea el texto al centro */
+}
+
+/* Estilo para los párrafos dentro de la página */
 .large-container p {
     word-wrap: break-word;
     white-space: normal; /* Hace que el texto se envuelva automáticamente */
     overflow-wrap: break-word;
-    line-height: 1.6; /* Aumenta la separación entre las líneas para mejor legibilidad */
+    line-height: 1.6; /* Mejora la legibilidad del texto */
+    margin-bottom: 20px; /* Agrega espacio entre los párrafos */
 }
 
-/* Botón centrado */
+/* Estilo para el título */
+.large-container h1, .large-container h2 {
+    margin: 10px 0;
+}
+
+/* Estilo del botón */
 button {
     margin-top: 20px;
-    background-color: #ff7e5f;
+    background-color: #ff7e5f; /* Color de fondo */
     color: white;
     border: none;
     border-radius: 5px;
@@ -45,5 +69,26 @@ button {
 }
 
 button:hover {
-    background-color: #feb47b;
+    background-color: #feb47b; /* Color de fondo cuando se pasa el ratón */
+}
+
+/* Asegura que los enlaces de WhatsApp sean adecuados */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Estilo general para el contenedor de carga y estrellas */
+.loading-container {
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
