@@ -6,11 +6,11 @@ body {
     background: black; /* Fondo negro */
     color: white;
     display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Asegura que los elementos se alineen desde la parte superior */
-    height: 100vh;
-    overflow: hidden; /* Evita que la página se desborde */
-    flex-direction: column; /* Hace que los elementos se dispongan de arriba a abajo */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+    overflow: hidden; /* Evita que se desborde la página */
+    flex-direction: column; /* Organiza los elementos en columna (de arriba a abajo) */
 }
 
 /* Fondo de estrellas en movimiento */
@@ -35,13 +35,16 @@ body {
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
     border-radius: 8px;
-    width: 80%; /* Establece un ancho fijo para el contenedor */
+    width: 90%; /* Ancho relativo al contenedor */
     max-width: 700px; /* Limita el ancho máximo */
     max-height: 80vh; /* Limita la altura al 80% de la pantalla */
     overflow-y: auto; /* Permite desplazamiento vertical si el contenido es demasiado largo */
     box-sizing: border-box;
     text-align: justify; /* Justifica el texto a la izquierda y derecha */
     margin: 20px; /* Márgenes iguales alrededor del contenedor */
+    display: flex;
+    flex-direction: column; /* Asegura que el contenido se disponga de arriba hacia abajo */
+    justify-content: flex-start; /* Alinea el contenido al inicio */
 }
 
 /* Asegura que el texto dentro de los párrafos no se desborde */
@@ -79,7 +82,7 @@ button {
     cursor: pointer;
     font-size: 1.2em;
     transition: background-color 0.3s ease;
-    align-self: flex-start; /* Asegura que el botón quede visible al final */
+    align-self: center; /* Centra el botón horizontalmente */
 }
 
 button:hover {
