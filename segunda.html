@@ -12,7 +12,31 @@
         <h1>¡Acceso Concedido!</h1>
         <h2>🤗Bienvenida Alejandra🤗</h2>
         <h3>LEAME HASTA EL FINAL PORFA🥺</h3>
-        <button onclick="window.location.href='sorpresa.html';">ABRIR</button>
+
+        <!-- Formulario para ingresar la contraseña -->
+        <div>
+            <label for="password">Ingrese la contraseña:</label>
+            <input type="password" id="password" placeholder="Contraseña" />
+            <button onclick="verificarContraseña()">Acceder</button>
+        </div>
     </div>
+
+    <script>
+        function verificarContraseña() {
+            const passwordInput = document.getElementById('password');
+            const password = passwordInput.value;
+
+            // Contraseña correcta
+            const correcta = 'tuContraseñaSegura'; // Cambia esta por la contraseña que quieras
+
+            if (password === correcta) {
+                // Si la contraseña es correcta, redirige a la tercera página
+                window.location.href = 'sorpresa.html';
+            } else {
+                // Si la contraseña es incorrecta, muestra un mensaje de error
+                alert('Contraseña incorrecta. Intenta de nuevo.');
+            }
+        }
+    </script>
 </body>
 </html>
