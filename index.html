@@ -4,125 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Especial</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #000428, #004e92);
-            color: white;
-            overflow: hidden;
-        }
-
-        /* Fondo de estrellas */
-        .stars {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
-            animation: moveStars 20s linear infinite;
-        }
-
-        @keyframes moveStars {
-            from {
-                background-position: 0 0;
-            }
-            to {
-                background-position: -1000px 1000px;
-            }
-        }
-
-        /* Pantalla de carga */
-        .loading {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
-
-        .dots {
-            font-size: 2em;
-            display: inline-block;
-        }
-
-        .dots span {
-            animation: dots 1.5s steps(3, end) infinite;
-        }
-
-        @keyframes dots {
-            0%, 20% { content: ''; }
-            40% { content: '.'; }
-            60% { content: '..'; }
-            100% { content: '...'; }
-        }
-
-        /* Contenedor principal */
-        .main {
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-
-        .box {
-            background: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            text-align: center;
-        }
-
-        input[type="password"] {
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            background: #ffffff33;
-            color: white;
-        }
-
-        input[type="password"]:focus {
-            outline: none;
-            border: 1px solid #004e92;
-        }
-
-        button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: #004e92;
-            color: white;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #003f7f;
-        }
-
-        /* Estilo para el contenido */
-        .content {
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-        }
-
-        .content p {
-            text-align: justify;
-            margin: 0 20px; /* Márgenes a los lados para separación del borde */
-            line-height: 1.8; /* Espaciado entre líneas */
-        }
-
-        .content h2 {
-            margin-bottom: 20px;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- Vincular el archivo CSS -->
 </head>
 <body>
     <div class="stars"></div>
@@ -142,50 +24,15 @@
 
     <div class="content">
         <h2>¡Bienvenida Ojitos Bonitos!</h2>
-        <p>Hola, ¿cómo estás? 😔 Me imagino que estás bien y hermosa como siempre, toda una princesa hecha y derecha 👑✨. Te digo algo, te extraño un montón, en serio, que te extraño 💔. Quiero pedir perdón por el daño que le causé a usted y a sus conocidos 😢. Sé que al momento de conocerme le escribieron, y sé que ahorita no le han escrito 😔. Usted piensa que soy yo, y la verdad no es así, quiero contarle la verdad, no fue buena idea mezclarlo con una mentira 😞, pero ahora te voy a hablar con la verdad.
-Cuando fui a mirar a Keisy, me hicieron pasar como un payaso, pero no le conté algo importante, y es que la única forma de alejarme de ella y que no lastime a nadie más fue dándole los $5’000.000 en diferentes momentos, cada 15 días, con un valor de $500.000 💸. Cuando usted me habló y me dijo que no quería saber nada de mí, y demás, fue porque nunca mandé los $500.000 💔. Pensé que ya se habían olvidado porque no me escribieron, pero le han escrito a usted… y perdón, no sé lo que pasó 😞.
-Cuando quise hablar con usted, fue demasiado tarde, y si le decía que le iba a dar esa plata, usted se ponía brava y demás, y no quería eso 😢. Pero por lo menos podía hablar con usted, y ahora fue peor… te perdí por no decirte la verdad 😔. Perdón por todo. En carnavales yo le di la plata, duele porque es con esfuerzo y regalarla así es feo, pero solo es papel, eso lo consigo de nuevo, la salud no 🩺. Y para que no pase nada, simplemente quería tomar esa decisión 😞.
-El costo total que le di fue de $6’000.000 💰. Firmamos una letra de cambio con copia de cédula original, y una carta en máquina hecha por los señores de la plaza de la notaría donde se explicaba paso a paso todos las justificaciones claras, detalladas y concisas ✍ ️. A partir de ese momento, y con ese valor, dejamos libre cada asociación conmigo y mis conocidos, y el no enviar SMS con otras cuentas a personas allegadas a mí 📱.
-Te pido perdón por todo, enserio, quiero volver a hablar y seguir compartiendo mil cosas con usted 🥺. Todos los días, a diferentes horas, mando un SMS para ver si uno de esos llega, y si alguno llega, de antemano, perdón por todo lo que ha pasado por mi culpa 😔. Pero en sí, nunca quise hacerle daño, me importas un montón 💖. Te quiero como nunca he querido a otra persona, incluso te quiero mucho más que a Danna 💕. Te cuido aunque sea desde lejos 🫶.
-Si gustas, puedes pegarme, rasguñarme, llorar conmigo y además… te presto mi brazo como le dije, pero no se lo puede llevar porque muere 😂. Quiero volver a escuchar su voz, verte y reír, especialmente cuando le sacan el zapato a uno 😂. Quiero que vuelvan esos momentos, Alejandra 😢. Te extraño un montón, un fuerte abrazo y un beso 😔. Espero de corazón que me escribas, en serio, que sí quiero esa notificación favorita que tanto me gusta 💬.</p>
+        <p>Hola, ¿cómo estás? 😔 Me imagino que estás bien y hermosa como siempre, toda una princesa hecha y derecha 👑✨. Te digo algo, te extraño un montón...</p>
         <button onclick="redirectToWhatsApp()">Siguiente</button>
     </div>
 
     <audio id="bg-music" loop>
-        <source src="https://raw.githubusercontent.com/AndrezB/January18/main/Prince Royce - La Carretera (LetraLyrics).mp3" type="audio/mpeg">
+        <source src="https://raw.githubusercontent.com/AndrezB/January18/main/Prince%20Royce%20-%20La%20Carretera%20(LetraLyrics).mp3" type="audio/mpeg">
         Tu navegador no soporta audio HTML5.
     </audio>
 
-    <script>
-        const loadingScreen = document.querySelector('.loading');
-        const mainScreen = document.querySelector('.main');
-        const contentScreen = document.querySelector('.content');
-        const music = document.getElementById('bg-music');
-
-        // Pantalla de carga
-        setTimeout(() => {
-            loadingScreen.style.display = 'none';
-            mainScreen.style.display = 'flex';
-        }, 5000); // 5 segundos
-
-        // Verificar contraseña
-        function checkPassword() {
-            const password = document.getElementById('password').value;
-            if (password === 'capibara') {
-                mainScreen.style.display = 'none';
-                contentScreen.style.display = 'flex';
-                music.play();
-            } else {
-                alert('Contraseña incorrecta');
-            }
-        }
-
-        // Redirigir a WhatsApp
-        function redirectToWhatsApp() {
-            music.pause();
-            music.currentTime = 0;
-            window.open('https://api.whatsapp.com/send?phone=+573226068586&text=Hola!%2C%20Yo%20Extraño%20y%20no%20sabes%20lo%20mucho%20que%20te%20extraño', '_blank');
-        }
-    </script>
+    <script src="scripts.js"></script> <!-- Vincular el archivo JavaScript -->
 </body>
 </html>
