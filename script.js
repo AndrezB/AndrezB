@@ -1,29 +1,13 @@
-const loadingScreen = document.querySelector('.loading');
-const mainScreen = document.querySelector('.main');
-const contentScreen = document.querySelector('.content');
-const music = document.getElementById('bg-music');
+// Animación de puntos en el mensaje de "Cargando..."
+let dotCount = 0;
+const dotsElement = document.getElementById("dots");
 
-// Pantalla de carga
+setInterval(() => {
+    dotCount = (dotCount + 1) % 4;
+    dotsElement.textContent = ".".repeat(dotCount);
+}, 500);
+
+// Redirigir automáticamente después de 10 segundos
 setTimeout(() => {
-    loadingScreen.style.display = 'none';
-    mainScreen.style.display = 'flex';
-}, 5000); // 5 segundos
-
-// Verificar contraseña
-function checkPassword() {
-    const password = document.getElementById('password').value;
-    if (password === 'capibara') {
-        mainScreen.style.display = 'none';
-        contentScreen.style.display = 'flex';
-        music.play();
-    } else {
-        alert('Contraseña incorrecta');
-    }
-}
-
-// Redirigir a WhatsApp
-function redirectToWhatsApp() {
-    music.pause();
-    music.currentTime = 0;
-    window.open('https://api.whatsapp.com/send?phone=+573226068586&text=Hola!%2C%20Yo%20Extraño%20y%20no%20sabes%20lo%20mucho%20que%20te%20extraño', '_blank');
-}
+    window.location.href = "segunda.html"; // Redirige a la segunda página
+}, 10000); // 10 segundos = 10000 milisegundos
