@@ -34,13 +34,13 @@ body {
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
     border-radius: 8px;
-    max-width: 90%; /* Limita el ancho al 90% */
-    max-height: 90vh; /* Limita la altura al 90% de la pantalla */
+    width: 80%; /* Establece un ancho fijo para el contenedor */
+    max-width: 700px; /* Limita el ancho máximo */
+    max-height: 80vh; /* Limita la altura al 80% de la pantalla */
     overflow-y: auto; /* Permite desplazamiento vertical si el contenido es demasiado largo */
     box-sizing: border-box;
     text-align: justify; /* Justifica el texto a la izquierda y derecha */
-    margin: 0 auto; /* Centra el contenedor */
-    display: block;
+    margin: 20px; /* Márgenes iguales alrededor del contenedor */
 }
 
 /* Asegura que el texto dentro de los párrafos no se desborde */
