@@ -7,9 +7,10 @@ body {
     color: white;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Asegura que los elementos se alineen desde la parte superior */
     height: 100vh;
-    overflow: hidden; /* Previene el desbordamiento de la página */
+    overflow: hidden; /* Evita que la página se desborde */
+    flex-direction: column; /* Hace que los elementos se dispongan de arriba a abajo */
 }
 
 /* Fondo de estrellas en movimiento */
@@ -35,8 +36,8 @@ body {
     background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
     border-radius: 8px;
     width: 80%; /* Establece un ancho fijo para el contenedor */
-    max-width: 10000px; /* Limita el ancho máximo */
-    max-height: 100vh; /* Limita la altura al 80% de la pantalla */
+    max-width: 700px; /* Limita el ancho máximo */
+    max-height: 80vh; /* Limita la altura al 80% de la pantalla */
     overflow-y: auto; /* Permite desplazamiento vertical si el contenido es demasiado largo */
     box-sizing: border-box;
     text-align: justify; /* Justifica el texto a la izquierda y derecha */
@@ -78,6 +79,7 @@ button {
     cursor: pointer;
     font-size: 1.2em;
     transition: background-color 0.3s ease;
+    align-self: flex-start; /* Asegura que el botón quede visible al final */
 }
 
 button:hover {
@@ -102,7 +104,7 @@ a {
     }
 
     h1, h2, p {
-        font-size: 1.0em; /* Ajusta el tamaño del texto en pantallas pequeñas */
+        font-size: 1.5em; /* Ajusta el tamaño del texto en pantallas pequeñas */
     }
 
     button {
