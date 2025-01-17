@@ -102,7 +102,7 @@ a {
     }
 
     h1, h2, p {
-        font-size: 8em; /* Ajusta el tamaño del texto en pantallas pequeñas */
+        font-size: 1.5em; /* Ajusta el tamaño del texto en pantallas pequeñas */
     }
 
     button {
