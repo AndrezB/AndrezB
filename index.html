@@ -142,7 +142,7 @@
         <div class="box">
             <h1>Para acceder responde correctamente</h1>
             <p>Cuando salimos el día de los correograficos nos comimos unas alitas a la bbq y en babagus miramos una papacapira, ¡ESCRIBA EL NOMBRE CORRECTO DE ESE PELUCHE! en minusculas.</p>
-            <input type="password" id="password" placeholder="¿Cómo me llamo?">
+            <input type="password" id="password" placeholder="¿Cómo me llamo?" autofocus>
             <button id="accessButton">Acceder</button>
         </div>
     </div>
@@ -165,11 +165,6 @@
         const passwordInput = document.getElementById('password');
         const accessButton = document.getElementById('accessButton');
         const music = document.getElementById('bg-music');
-
-        // Función para enfocar automáticamente el campo de contraseña al cargar
-        window.onload = () => {
-            passwordInput.focus();
-        };
 
         // Pantalla de carga
         setTimeout(() => {
@@ -195,6 +190,13 @@
             music.currentTime = 0;
             window.open('https://api.whatsapp.com/send?phone=+573226068586&text=Hola!%2C%20Yo%20Extraño%20y%20no%20sabes%20lo%20mucho%20que%20te%20extraño', '_blank');
         }
+
+        // Asegurarse de que el foco se coloca en el campo de texto para activar el teclado
+        passwordInput.addEventListener('focus', () => {
+            setTimeout(() => {
+                passwordInput.focus(); // Reiniciar foco para dispositivos móviles
+            }, 200); // pequeño retraso para evitar problemas en móviles
+        });
     </script>
 </body>
 </html>
