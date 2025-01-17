@@ -45,6 +45,8 @@ body {
     display: flex;
     flex-direction: column; /* Asegura que el contenido se disponga de arriba hacia abajo */
     justify-content: flex-start; /* Alinea el contenido al inicio */
+    align-items: center; /* Centra los elementos dentro del contenedor */
+    height: auto; /* Permite que la altura del contenedor sea dinámica */
 }
 
 /* Asegura que el texto dentro de los párrafos no se desborde */
@@ -52,21 +54,22 @@ body {
     word-wrap: break-word;
     white-space: normal; /* Hace que el texto se envuelva automáticamente */
     overflow-wrap: break-word;
-    line-height: 1.6; /* Mejora la legibilidad del texto */
+    line-height: 1.4; /* Ajusta la altura de línea para que no se vea tan grande */
     margin-bottom: 20px; /* Agrega espacio entre los párrafos */
+    font-size: 1.1em; /* Reduce un poco el tamaño del texto */
 }
 
 /* Estilo para el título */
 .large-container h1, .large-container h2 {
     margin: 10px 0;
-    font-size: 2em; /* Aumenta el tamaño del título */
+    font-size: 1.8em; /* Reducir el tamaño de los títulos */
     color: #ff7e5f; /* Color de título */
     text-align: center; /* Centra los títulos */
 }
 
 /* Estilo para el texto dentro de los títulos secundarios */
 .large-container h3 {
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: #feb47b;
     text-align: center;
 }
@@ -107,7 +110,7 @@ a {
     }
 
     h1, h2, p {
-        font-size: 1.5em; /* Ajusta el tamaño del texto en pantallas pequeñas */
+        font-size: 1.3em; /* Ajusta el tamaño del texto en pantallas pequeñas */
     }
 
     button {
