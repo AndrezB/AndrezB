@@ -8,9 +8,9 @@
 </head>
 <body>
     <div class="large-container">
-        <h1>🥺</h1>
+        <h1>LLEGASTE 🥺</h1>
         <p>Hola Ojitos bonitos, ¿cómo estás? 😊 ...</p>
-        <button id="stopBtn" onclick="toggleMusic()">Detener Música</button>
+        <button id="stopBtn" onclick="detenerYRedirigir()">Detener Música y Enviar Mensaje</button>
         <audio id="music" loop>
             <source src="https://raw.githubusercontent.com/AndrezB/January18/main/Prince%20Royce%20-%20La%20Carretera%20(LetraLyrics).mp3" type="audio/mp3">
             Tu navegador no soporta la reproducción de audio.
@@ -24,15 +24,21 @@
         // Reproduce la música automáticamente al cargar
         window.onload = () => music.play();
 
-        // Función para detener la música
-        function toggleMusic() {
-            if (music.paused) {
-                music.play();
-                stopBtn.textContent = "Detener Música";
-            } else {
-                music.pause();
-                stopBtn.textContent = "Reproducir Música";
-            }
+        // Función para detener la música y redirigir a WhatsApp
+        function detenerYRedirigir() {
+            // Detenemos la música
+            music.pause();
+            stopBtn.textContent = "Siguiente"; // Cambia el texto del botón
+
+            // El número de WhatsApp y el mensaje que quieres enviar
+            const numeroWhatsApp = "+573226068586"; // Reemplaza con tu número de WhatsApp
+            const mensaje = "Hola, no sabes lo mucho que te extraño."; // El mensaje que se enviará
+
+            // Crear el enlace de WhatsApp
+            const enlaceWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+
+            // Redirigir al enlace de WhatsApp
+            window.location.href = enlaceWhatsApp;
         }
     </script>
 </body>
