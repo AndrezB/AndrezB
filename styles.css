@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #000428, #004e92);
+    color: white;
+    overflow: hidden;
+}
+
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+    animation: moveStars 20s linear infinite;
+}
+
+@keyframes moveStars {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -1000px 1000px;
+    }
+}
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.dots {
+    font-size: 2em;
+    display: inline-block;
+}
+
+.dots span {
+    animation: dots 1.5s steps(3, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% { content: ''; }
+    40% { content: '.'; }
+    60% { content: '..'; }
+    100% { content: '...'; }
+}
+
+.main {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 10px; /* Para mayor espacio en móviles */
+}
+
+.box {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 90%; /* Para que se ajuste en pantallas pequeñas */
+    max-width: 400px; /* Límite máximo de ancho */
+}
+
+input[type="password"] {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background: #ffffff33;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="password"]:focus {
+    outline: none;
+    border: 1px solid #004e92;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #004e92;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.2em;
+}
+
+button:hover {
+    background-color: #003f7f;
+}
+
+.content {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    padding: 10px; /* Para mayor espacio en móviles */
+}
+
+.content p {
+    text-align: justify;
+    margin: 0 20px;
+    line-height: 1.8;
+}
+
+.content h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 600px) {
+    .loading h1 {
+        font-size: 1.5em;
+    }
+
+    .dots span {
+        font-size: 1.5em;
+    }
+
+    .box h1 {
+        font-size: 1.2em;
+    }
+
+    .content p {
+        font-size: 0.9em;
+    }
+
+    button {
+        font-size: 1em;
+    }
+}
