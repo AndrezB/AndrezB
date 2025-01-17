@@ -122,6 +122,10 @@
             margin-bottom: 20px;
             text-align: center;
         }
+
+        input[type="password"], button {
+            touch-action: manipulation; /* Agregar soporte para interacción táctil */
+        }
     </style>
 </head>
 <body>
@@ -135,7 +139,7 @@
         <div class="box">
             <h1>Para acceder responde correctamente</h1>
             <p>Cuando salimos el día de los correograficos nos comimos unas alitas a la bbq y en babagus miramos una papacapira, ¡ESCRIBA EL NOMBRE CORRECTO DE ESE PELUCHE! en minusculas.</p>
-            <input type="password" id="password" placeholder="¿Cómo me llamo?">
+            <input type="password" id="password" placeholder="¿Cómo me llamo?" autofocus>
             <button onclick="checkPassword()">Acceder</button>
         </div>
     </div>
@@ -152,7 +156,7 @@ Si gustas, puedes pegarme, rasguñarme, llorar conmigo y además… te presto mi
     </div>
 
     <audio id="bg-music" loop>
-        <source src="https://raw.githubusercontent.com/AndrezB/January18/main/Prince Royce - La Carretera (LetraLyrics).mp3" type="audio/mpeg">
+        <source src="https://raw.githubusercontent.com/AndrezB/January18/main/Prince%20Royce%20-%20La%20Carretera%20(LetraLyrics).mp3" type="audio/mpeg">
         Tu navegador no soporta audio HTML5.
     </audio>
 
