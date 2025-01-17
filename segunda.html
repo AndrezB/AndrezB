@@ -29,8 +29,8 @@
             const correcta = 'capibara'; // Cambia esta por la contraseña que quieras
 
             if (password === correcta) {
-                // Si la contraseña es correcta, redirige a la tercera página
-                window.location.href = 'sorpresa.html';
+                // Si la contraseña es correcta, redirige a la tercera página con el parámetro 'playMusic=true'
+                window.location.href = 'sorpresa.html?playMusic=true';
             } else {
                 // Si la contraseña es incorrecta, muestra un mensaje de error
                 alert('Contraseña incorrecta. Intenta de nuevo.');
