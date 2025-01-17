@@ -1,107 +1,47 @@
-/* Fondo de estrellas en movimiento */
+/* Asegurar que el contenedor no se desborde */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: black; /* Fondo negro */
+    background: black; /* Fondo negro */
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: white;
     overflow: hidden;
 }
 
-/* Fondo de estrellas */
-.stars {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('stars.png') repeat;
-    animation: moveStars 100s linear infinite;
-    pointer-events: none;
-}
-
-@keyframes moveStars {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-100%); }
-}
-
-/* Animación de "Cargando..." */
-.loading-container {
-    position: absolute;
-    text-align: center;
-    color: white;
-    font-size: 2em;
-    font-weight: bold;
-    animation: fadeIn 2s ease-in-out;
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-/* Estilo de la página de acceso */
-.adorned-page {
-    z-index: 10;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.1); /* Fondo con opacidad */
-    padding: 30px;
-    border-radius: 8px;
-    max-width: 600px;
-    border: 1px solid white; /* Borde blanco */
-}
-
-/* Estilo para el formulario de contraseña */
-.adorned-page div {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.adorned-page input {
-    padding: 10px;
-    font-size: 1em;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 80%;
-    max-width: 300px;
-}
-
-.adorned-page button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.adorned-page button:hover {
-    background-color: #45a049;
-}
-
-/* Estilo de la tercera página */
+/* Contenedor que tiene el texto */
 .large-container {
-    max-width: 90%;
-    margin: 20px;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1); /* Fondo con opacidad */
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 8px;
+    max-width: 90%; /* Asegura que el contenedor no ocupe todo el ancho */
+    overflow: hidden;
+    word-wrap: break-word; /* Evita que las palabras se desborden */
+    max-height: 90vh; /* Limita la altura para no desbordarse en pantallas pequeñas */
+    box-sizing: border-box;
 }
 
-/* Estilo de los botones */
+/* Estilo para el texto largo */
+.large-container p {
+    word-wrap: break-word;
+    white-space: normal; /* Hace que el texto se envuelva automáticamente */
+    overflow-wrap: break-word;
+    line-height: 1.6; /* Aumenta la separación entre las líneas para mejor legibilidad */
+}
+
+/* Botón centrado */
 button {
+    margin-top: 20px;
     background-color: #ff7e5f;
     color: white;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
+    font-size: 1.2em;
 }
 
 button:hover {
