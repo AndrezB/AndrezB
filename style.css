@@ -38,8 +38,9 @@ body {
     max-height: 90vh; /* Limita la altura al 90% de la pantalla */
     overflow-y: auto; /* Permite desplazamiento vertical si el contenido es demasiado largo */
     box-sizing: border-box;
-    text-align: left; /* Alinea el texto a la izquierda */
+    text-align: justify; /* Justifica el texto a la izquierda y derecha */
     margin: 0 auto; /* Centra el contenedor */
+    display: block;
 }
 
 /* Asegura que el texto dentro de los párrafos no se desborde */
@@ -56,6 +57,14 @@ body {
     margin: 10px 0;
     font-size: 2em; /* Aumenta el tamaño del título */
     color: #ff7e5f; /* Color de título */
+    text-align: center; /* Centra los títulos */
+}
+
+/* Estilo para el texto dentro de los títulos secundarios */
+.large-container h3 {
+    font-size: 1.5em;
+    color: #feb47b;
+    text-align: center;
 }
 
 /* Botón estilo */
