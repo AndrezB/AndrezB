@@ -3,14 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cargando con Estrellas</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Página de carga</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Vincula tu CSS -->
 </head>
 <body>
-    <div class="stars"></div> <!-- Fondo dinámico de estrellas -->
-    <div class="content">
+    <!-- Fondo de estrellas -->
+    <div class="stars"></div>
+    
+    <!-- Contenido de carga -->
+    <div id="loading-container">
         <h1>Cargando...</h1>
-        <p>Por favor, espera un momento mientras preparamos todo para ti.</p>
+        <p>Por favor, espera mientras preparamos todo para ti.</p>
     </div>
+
+    <script>
+        // Temporizador de 10 segundos antes de redirigir
+        setTimeout(() => {
+            window.location.href = "segunda.html"; // Cambia "siguiente.html" por tu página de destino
+        }, 10000); // 10 segundos = 10000 milisegundos
+    </script>
 </body>
 </html>
