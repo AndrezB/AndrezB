@@ -1,26 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de carga</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Vincula tu CSS -->
+    <title>Una pequeña nota pt.1</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Fondo de estrellas -->
-    <div class="stars"></div>
-    
-    <!-- Contenido de carga -->
-    <div id="loading-container">
-        <h1>Cargando...</h1>
-        <p>Por favor, espera mientras preparamos todo para ti.</p>
+    <div class="stars"></div> <!-- Fondo de estrellas -->
+    <div class="loading-container">
+        <h1>Cargando<span id="dots">...</span></h1>
     </div>
-
-    <script>
-        // Temporizador de 10 segundos antes de redirigir
-        setTimeout(() => {
-            window.location.href = "segunda.html"; // Cambia "siguiente.html" por tu página de destino
-        }, 10000); // 10 segundos = 10000 milisegundos
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
