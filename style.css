@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: black; /* Fondo negro */
+    background: linear-gradient(to bottom, #000000, #003366); /* Degradado de negro a azul */
     color: white;
     display: flex;
     justify-content: center; /* Centra el contenido horizontalmente */
@@ -13,6 +13,7 @@ body {
     flex-direction: column; /* Organiza los elementos en columna (de arriba a abajo) */
 }
 
+/* Estrellas en el fondo */
 .stars {
     position: absolute;
     top: 0;
@@ -22,15 +23,22 @@ body {
     background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 10%, transparent 10%),
                 radial-gradient(circle, rgba(255, 255, 255, 0.8) 10%, transparent 10%);
     background-size: 50px 50px;
-    animation: moveStars 100s linear infinite;
+    animation: moveStars 100s linear infinite, moveStarsRandom 40s linear infinite;
     pointer-events: none;
+    z-index: -1; /* Asegura que las estrellas estén detrás de otros elementos */
 }
 
+/* Animación de movimiento de las estrellas */
 @keyframes moveStars {
     0% { transform: translateY(0); }
-    100% { transform: translateY(-100%); }
+    100% { transform: translateY(-100%); } /* Estrellas se mueven en diagonal */
 }
 
+/* Animación para movimiento aleatorio en todas direcciones */
+@keyframes moveStarsRandom {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(200%, 200%); } /* Movimiento aleatorio hacia todas direcciones */
+}
 
 /* Estilo para el contenedor de la tercera página */
 .large-container {
