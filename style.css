@@ -13,33 +13,6 @@ body {
     flex-direction: column; /* Organiza los elementos en columna (de arriba a abajo) */
 }
 
-/* Estrellas en el fondo */
-.stars {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 10%, transparent 10%),
-                radial-gradient(circle, rgba(255, 255, 255, 0.8) 10%, transparent 10%);
-    background-size: 50px 50px;
-    animation: moveStars 100s linear infinite, moveStarsRandom 40s linear infinite;
-    pointer-events: none;
-    z-index: -1; /* Asegura que las estrellas estén detrás de otros elementos */
-}
-
-/* Animación de movimiento de las estrellas */
-@keyframes moveStars {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-100%); } /* Estrellas se mueven en diagonal */
-}
-
-/* Animación para movimiento aleatorio en todas direcciones */
-@keyframes moveStarsRandom {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(200%, 200%); } /* Movimiento aleatorio hacia todas direcciones */
-}
-
 /* Estilo para el contenedor de la tercera página */
 .large-container {
     padding: 20px;
