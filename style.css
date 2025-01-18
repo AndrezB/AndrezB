@@ -18,16 +18,23 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('stars.png') repeat;
-    animation: moveStars 100s linear infinite;
-    pointer-events: none;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, white 1px, transparent 1px) 0% 0%,
+                radial-gradient(circle, white 1px, transparent 1px) 50% 50%;
+    background-size: 10px 10px; /* Tamaño de las estrellas */
+    animation: moveStars 20s linear infinite; /* Movimiento suave */
+    z-index: -1; /* Coloca las estrellas detrás del contenido */
 }
 
+/* Animación para mover las estrellas */
 @keyframes moveStars {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-100%); }
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(-50%, -50%);
+    }
 }
 
 /* Estilo para el contenedor de la tercera página */
