@@ -13,34 +13,29 @@ body {
     flex-direction: column; /* Organiza los elementos en columna (de arriba a abajo) */
 }
 
-/* Fondo de estrellas en movimiento */
 .stars {
     position: absolute;
     top: 0;
     left: 0;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, white 1px, transparent 1px) 0% 0%,
-                radial-gradient(circle, white 1px, transparent 1px) 50% 50%;
-    background-size: 10px 10px; /* Tamaño de las estrellas */
-    animation: moveStars 20s linear infinite; /* Movimiento suave */
-    z-index: -1; /* Coloca las estrellas detrás del contenido */
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 10%, transparent 10%),
+                radial-gradient(circle, rgba(255, 255, 255, 0.8) 10%, transparent 10%);
+    background-size: 50px 50px;
+    animation: moveStars 100s linear infinite;
+    pointer-events: none;
 }
 
-/* Animación para mover las estrellas */
 @keyframes moveStars {
-    from {
-        transform: translate(0, 0);
-    }
-    to {
-        transform: translate(-50%, -50%);
-    }
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100%); }
 }
+
 
 /* Estilo para el contenedor de la tercera página */
 .large-container {
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    background-color: rgba(0, 0, 0, 0); /* Fondo semitransparente */
     border-radius: 8px;
     width: 90%; /* Ancho relativo al contenedor */
     max-width: 700px; /* Limita el ancho máximo */
